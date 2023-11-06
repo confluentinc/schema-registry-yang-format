@@ -1,5 +1,5 @@
 name: schema-registry-extensions
-lang: unknown
+lang: java
 lang_version: unknown
 git:
   enable: true
