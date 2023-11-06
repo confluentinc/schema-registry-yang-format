@@ -5,7 +5,7 @@
   <parent>
     <groupId>io.confluent</groupId>
     <artifactId>common</artifactId>
-    <version>7.6.0-642</version>
+    <version>7.6.0-644</version>
   </parent>
 
   <groupId>io.confluent</groupId>
@@ -23,11 +23,6 @@
   </description>
 
   <licenses>
-    <license>
-      <name>Confluent Community License</name>
-      <url>http://www.confluent.io/confluent-community-license</url>
-      <distribution>repo</distribution>
-    </license>
     <license>
       <name>Apache License 2.0</name>
       <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
@@ -51,28 +46,7 @@
     <kafka.connect.maven.plugin.version>0.11.1</kafka.connect.maven.plugin.version>
     <exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
     <checkstyle.suppressions.location>checkstyle/suppressions.xml</checkstyle.suppressions.location>
-    <commons.compress.version>1.21</commons.compress.version>
-    <commons.lang3.version>3.12.0</commons.lang3.version>
   </properties>
-
-  <dependencies>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-compress</artifactId>
-      <version>${commons.compress.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>org.apache.commons</groupId>
-      <artifactId>commons-lang3</artifactId>
-      <version>${commons.lang3.version}</version>
-    </dependency>
-<!--    <dependency>-->
-<!--      <groupId>junit</groupId>-->
-<!--      <artifactId>junit</artifactId>-->
-<!--      <version>3.8.1</version>-->
-<!--      <scope>test</scope>-->
-<!--    </dependency>-->
-  </dependencies>
 
   <build>
     <pluginManagement>

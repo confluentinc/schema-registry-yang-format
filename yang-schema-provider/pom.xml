@@ -4,9 +4,17 @@
 
     <parent>
         <groupId>io.confluent</groupId>
-        <artifactId>kafka-schema-registry-parent</artifactId>
-        <version>7.5.0-0</version>
+        <artifactId>schema-registry-extensions</artifactId>
+        <version>1.0.0</version>
     </parent>
+
+    <licenses>
+        <license>
+            <name>Apache License 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <artifactId>kafka-yang-schema-provider</artifactId>
     <packaging>jar</packaging>
@@ -16,6 +24,7 @@
         <dependency>
             <groupId>io.confluent</groupId>
             <artifactId>kafka-schema-registry-client</artifactId>
+            <version>${io.confluent.schema-registry.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.yang-central.yangkit</groupId>

@@ -1,4 +1,4 @@
-package com.swisscom.kafka.schemaregistry.yang;
+package io.confluent.kafka.schemaregistry.yang;
 
 import io.confluent.kafka.schemaregistry.client.rest.entities.Schema;
 import io.confluent.kafka.schemaregistry.client.rest.entities.SchemaString;

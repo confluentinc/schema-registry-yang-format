@@ -1,4 +1,4 @@
-package com.swisscom.kafka.schemaregistry.yang;
+package io.confluent.kafka.schemaregistry.yang;
 
 public class TestSchemas {
   static final String SIMPLE_SCHEMA =
