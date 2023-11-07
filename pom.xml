@@ -12,7 +12,7 @@
   <artifactId>schema-registry-extensions</artifactId>
   <packaging>pom</packaging>
   <name>schema-registry-extensions</name>
-  <version>1.0.0</version>
+  <version>7.6.0-0</version>
   <organization>
     <name>Confluent, Inc.</name>
     <url>http://confluent.io</url>
