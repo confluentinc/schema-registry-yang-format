@@ -1,0 +1,1 @@
+This repo is to support other serialization format rather than Avro, Protobuf and JSON. 
