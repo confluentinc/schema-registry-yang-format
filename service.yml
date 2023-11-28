@@ -1,9 +1,13 @@
 name: schema-registry-extensions
 lang: java
-lang_version: unknown
+lang_version: 17
 git:
   enable: true
 github:
   enable: true
 codeowners:
   enable: true
+semaphore:
+  enable: true
+  pipeline_type: cp
+  nano_version: true
