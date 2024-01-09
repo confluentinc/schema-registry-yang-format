@@ -225,7 +225,7 @@ public class YangSchema implements ParsedSchema {
   }
 
   @Override
-  public void validate() {
+  public void validate(boolean strict) {
     ValidatorResult result = this.context.validate();
     if (!result.isOk()) {
       throw new IllegalArgumentException(
