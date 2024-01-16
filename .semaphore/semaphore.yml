@@ -29,7 +29,7 @@ global_job_config:
 
 blocks:
   - name: Test
-    dependencies: []
+    dependencies: [ ]
     run:
       # don't run the tests on non-functional changes...
       when: "change_in('/', {exclude: ['/.deployed-versions/', '.github/']})"
@@ -47,14 +47,34 @@ blocks:
           commands:
             - . publish-test-results
             - artifact push workflow target/test-results
+  - name: Yang Schema Test
+    dependencies: []
+    run:
+      # don't run the tests on non-functional changes...
+      when: "change_in('yang-schema/')"
+    task:
+      jobs:
+        - name: Yang Schema Test
+          commands:
+            - cd yang-schema
+            - pip install confluent-release-tools -q
+            - . sem-pint -c
+            - . ci-tools ci-update-version
+            - mvn -U -Dmaven.wagon.http.retryHandler.count=2 --batch-mode --no-transfer-progress clean verify install dependency:analyze validate
+            - . cache-maven store
+      epilogue:
+        always:
+          commands:
+            - . publish-test-results
+            - artifact push workflow target/test-results
 
-  - name: Release
-    dependencies: ["Test"]
+  - name: Yang Schema Release
+    dependencies: ["Yang Schema Test"]
     run:
       when: "branch = 'master' or branch =~ '[0-9]+\\.[0-9]+\\.x'"
     task:
       jobs:
-        - name: Release
+        - name: Yang Schema Release
           commands:
             - . ci-tools ci-update-version
             - . ci-tools ci-push-tag
