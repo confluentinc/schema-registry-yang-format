@@ -2,18 +2,24 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
+  <parent>
+    <groupId>io.confluent</groupId>
+    <artifactId>common</artifactId>
+    <version>[7.6.0-0, 7.6.1-0)</version>
+  </parent>
+
   <groupId>io.confluent</groupId>
-  <artifactId>schema-registry-extensions</artifactId>
+  <artifactId>yang-schema</artifactId>
   <packaging>pom</packaging>
-  <name>schema-registry-extensions</name>
-  <version>7.6.0-0</version>
+  <name>yang-schema</name>
+  <version>1.0.0-0</version>
   <organization>
     <name>Confluent, Inc.</name>
     <url>http://confluent.io</url>
   </organization>
   <url>http://confluent.io</url>
   <description>
-    Schema Registry Extensions.
+    Yang Schema
   </description>
 
   <licenses>
@@ -24,16 +30,16 @@
     </license>
   </licenses>
 
-  <scm>
-    <connection>scm:git:git://github.com/confluentinc/schema-registry-extensions.git</connection>
-    <developerConnection>scm:git:git@github.com:confluentinc/schema-registry-extensions.git</developerConnection>
-    <url>https://github.com/confluentinc/schema-registry-extensions</url>
-    <tag>HEAD</tag>
-  </scm>
 
   <modules>
-    <module>yang-schema</module>
+    <module>yang-schema-provider</module>
   </modules>
+
+  <properties>
+    <io.confluent.schema-registry.version>${confluent.version.range}</io.confluent.schema-registry.version>
+    <exec-maven-plugin.version>1.2.1</exec-maven-plugin.version>
+    <checkstyle.suppressions.location>../checkstyle/suppressions.xml</checkstyle.suppressions.location>
+  </properties>
 
   <build>
     <plugins>
@@ -103,5 +109,4 @@
       </build>
     </profile>
   </profiles>
-
 </project>
