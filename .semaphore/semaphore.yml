@@ -69,12 +69,13 @@ blocks:
 
   - name: Yang Schema Release
     dependencies: ["Yang Schema Test"]
-    run:
-      when: "branch = 'master' or branch =~ '[0-9]+\\.[0-9]+\\.x'"
+#    run:
+#      when: "branch = 'master' or branch =~ '[0-9]+\\.[0-9]+\\.x'"
     task:
       jobs:
         - name: Yang Schema Release
           commands:
+            - cd yang-schema
 #            - . ci-tools ci-update-version
             - . ci-tools ci-push-tag
             - mvn -U -Dmaven.wagon.http.retryHandler.count=10 --batch-mode -DaltDeploymentRepository=confluent-codeartifact-internal::default::https://confluent-519856050701.d.codeartifact.us-west-2.amazonaws.com/maven/maven-snapshots/
