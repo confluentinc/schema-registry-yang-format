@@ -58,7 +58,6 @@ blocks:
           commands:
             - cd yang-schema
             - pip install confluent-release-tools -q
-            - . sem-pint -c
 #            - . ci-tools ci-update-version
             - mvn -U -Dmaven.wagon.http.retryHandler.count=2 --batch-mode --no-transfer-progress clean verify install dependency:analyze validate
             - . cache-maven store
