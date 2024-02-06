@@ -5,14 +5,14 @@
   <parent>
     <groupId>io.confluent</groupId>
     <artifactId>common</artifactId>
-    <version>[7.6.0-0, 7.6.1-0)</version>
+    <version>7.6.0-815</version>
   </parent>
 
   <groupId>io.confluent</groupId>
   <artifactId>yang-schema</artifactId>
   <packaging>pom</packaging>
   <name>yang-schema</name>
-  <version>1.0.0-0</version>
+  <version>7.6.0-10</version>
   <organization>
     <name>Confluent, Inc.</name>
     <url>http://confluent.io</url>
