@@ -1,4 +1,4 @@
-name: schema-registry-extensions
+name: schema-registry-yang-format
 lang: java
 lang_version: 17
 git:

@@ -2,6 +2,7 @@ package io.confluent.kafka.schemaregistry.yang;
 
 import io.confluent.kafka.schemaregistry.client.rest.entities.Schema;
 import io.confluent.kafka.schemaregistry.client.rest.entities.SchemaString;
+import io.confluent.kafka.schemaregistry.yang.YangSchemaUtils;
 import org.junit.Before;
 import org.junit.Test;
 import org.yangcentral.yangkit.model.api.schema.YangSchemaContext;
