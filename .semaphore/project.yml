@@ -6,12 +6,12 @@
 apiVersion: v1alpha
 kind: Project
 metadata:
-  name: schema-registry-yang-format
+  name: schema-registry-extensions
   description: ""
 spec:
   visibility: private
   repository:
-    url: git@github.com:confluentinc/schema-registry-yang-format.git
+    url: git@github.com:confluentinc/schema-registry-extensions.git
     run_on:
     - branches
     - pull_requests
