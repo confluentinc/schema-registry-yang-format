@@ -1,1 +1,1 @@
-This repo is to support Yang serialization format. 
+This repo is to support Yang data format. 
