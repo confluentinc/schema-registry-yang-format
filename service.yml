@@ -11,3 +11,9 @@ semaphore:
   enable: true
   pipeline_type: cp
   nano_version: true
+code_artifact:
+  enable: true
+  package_paths:
+    - maven-snapshots/maven/io.confluent/schema-registry-extensions
+    - maven-snapshots/maven/io.confluent/kafka-yang-schema-provider
+    - maven-snapshots/maven/io.confluent/yang-schema
